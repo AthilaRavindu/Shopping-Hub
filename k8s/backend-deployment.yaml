@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: drashanamahesh/node-app:latest
+        ports:
+        - containerPort: 5000
+        env: 
+            - name: PORT
+              value: "5000"
+            - name: CONN_STR
+              value: "mongodb+srv://darshanamahesh1600:9nm6xutfPnj70jeC@cluster0.8rfeoyy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  selector:
+    app: backend
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
