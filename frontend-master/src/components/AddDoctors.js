@@ -29,7 +29,7 @@ const AddDoctors = () => {
     <div className="main" >
       <form onSubmit={handleSubmit}>
         <TextField
-          label="Enter the Doctor's Name"
+          label="Enter the ITEM's Name"
           variant="outlined"
           fullWidth
           value={name}
@@ -43,7 +43,7 @@ const AddDoctors = () => {
           }}
         />
         <TextField
-          label="Short Description About the Doctor"
+          label="CODE OF ITEM"
           variant="outlined"
           fullWidth
           value={description}
@@ -71,7 +71,7 @@ const AddDoctors = () => {
           }}
         />
         <TextField
-          label="Hospital Name"
+          label="BUYER'S Name"
           variant="outlined"
           fullWidth
           value={hospital}

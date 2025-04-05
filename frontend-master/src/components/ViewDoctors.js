@@ -37,9 +37,9 @@ const ViewDoctors = () => {
   return (
     <div className='main'>
       <Container sx={{ backgroundColor: '', minHeight: '100vh', paddingTop: '16px' }}>
-        <h1>Doctors</h1>
+        <h1>ITEMS</h1>
         <TextField
-          label="Search by Doctor Name"
+          label="Search by Items Name"
           variant="outlined"
           fullWidth
           value={filter}
