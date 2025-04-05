@@ -6,7 +6,7 @@ const Login1 = () => {
       <div className="card">
         <button className="hospital-button"  onClick={() => {
                 window.location.href = '/signin';
-              }} >LOG AS A SELLER 1111</button>
+              }} >LOG AS A SELLER</button>
       </div>
 
 
